@@ -1,0 +1,21 @@
+# alias definitions
+alias ls='ls --color=auto'
+alias li='du -cksh * | sort -h'
+alias j="z" # jump for FASD
+alias gka="gitk --all"
+
+# change directories
+alias cd..="cd .."
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+alias ......="cd ../../../../../"
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+
+alias gst="git status"
+alias gka="gitk --all &"
+alias giu="git gui &"
+
