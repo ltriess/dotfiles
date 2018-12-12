@@ -112,8 +112,8 @@ else
     print "404: ~/dotfiles/sh_alias not found."
 fi
 
-if [ -f ~/.local_rc ]; then
-    source ~/.local_rc
+if [ -f $HOME/.localrc ]; then
+    source $HOME/.localrc
 fi
 
 # You may want to put all your additions into a separate file like
