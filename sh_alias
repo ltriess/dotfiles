@@ -1,4 +1,8 @@
 # alias definitions
+alias ll='ls -alF'
+alias ls='la -A'
+alias l='ls -CF'
+alias lm='ll | less'
 alias ls='ls --color=auto'
 alias li='du -cksh * | sort -h'
 
