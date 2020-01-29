@@ -1,4 +1,4 @@
-# alias definitions
+# listing
 alias ll='ls -alF'
 alias ls='la -A'
 alias l='ls -CF'
@@ -17,9 +17,15 @@ alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
 
+# git
 alias gst="git status"
 alias gka="gitk --all &"
 alias giu="git gui &"
 alias gitd="git diff"
 alias gitr="git remote -v"
 alias c="git commit -m"
+alias lg='lazygit'
+
+# programs
+alias nvsmi='watch -d -n 0.5 nvidia-smi'
+alias tb="python -c \"import os, sys; os.system('tensorboard --logdir ' + ','.join([(d + ':' + d) for d in sys.argv[1:]]))\""
