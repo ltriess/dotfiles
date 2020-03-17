@@ -23,13 +23,7 @@ export PYTHONSTARTUP=~/.pythonrc
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -116,6 +110,33 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-3]="fg=magenta,bold"
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]="fg=yellow,bold"
 
 # =============================================================================
+#                               antigen
+# =============================================================================
+
+source $DOTFILES_BASEDIR/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+antigen bundle paulirish/git-open
+antigen bundle allcatsarebeautiful/fasd
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme. Crash when entering git repository?
+# antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
+
+# =============================================================================
 #                           miscellaneous
 # =============================================================================
 
@@ -127,12 +148,23 @@ else
     export EDITOR='vim'
 fi
 
+# use fasd to edit files with vim
+alias v='f -t -e vim -b viminfo'
+
+# enable fasd in cached mode
+fasd_cache="$HOME/.fasd-init-bash"
+if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-install >| "$fasd_cache"
+fi
+source "$fasd_cache"
+unset fasd_cache
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd fzf)
+# plugins=(git rvm fasd)
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -150,8 +182,18 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # =============================================================================
 #                                 prompt
 # =============================================================================
+
 # oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
+
+# powerlevel9k
+# source $DOTFILES_BASEDIR/zsh/powerlevel9k.zsh
+
+# powerline
+source $HOME/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# enable thefuck after PS1 is set
+eval $(thefuck --alias)
 
 # =============================================================================
 #                                 aliases
