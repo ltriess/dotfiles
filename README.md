@@ -1,7 +1,8 @@
 # Dotfiles
-This repo primarily provides a basic configuration for tmux, vim, and bash.
+This repo primarily provides a basic configuration for zsh, tmux, and vim.
 
 ## Install notes
+
 I recommend to clone it to a folder $HOME/dotfiles.
 
 Make sure to checkout submodules:
@@ -13,20 +14,16 @@ $ ./bootstrap
 
 ## Dependencies
 
+Install with apt
 ```bash
 sudo apt-get install zsh tmux vim-gnome python3-pip socat rxvt-unicode-256color xautomation xbindkeys
 ```
 
+Install with pip
 ```bash
 pip3 install thefuck
 ```
 
-Powerline Python package
-```bash
-sudo -H pip3 install powerline-status
-sudo -H pip3 install powerline-gitstatus
-ln -s ~/dotfiles/config/powerline ~/.config/powerline
-```
 ### Powerlevel10k
 Follow instructions on [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
 Install [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) before configuring.
