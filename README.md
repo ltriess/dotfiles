@@ -27,6 +27,10 @@ sudo -H pip3 install powerline-status
 sudo -H pip3 install powerline-gitstatus
 ln -s ~/dotfiles/config/powerline ~/.config/powerline
 ```
+### Powerlevel10k
+Follow instructions on [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+Install [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) before configuring.
+Type `p10k configure` to start the configuration wizard.
 
 ## Software
 
@@ -34,3 +38,4 @@ Set global .gitignore
 ```bash
 git config --global core.excludesfile ~/dotfiles/gitignore_global
 ```
+
