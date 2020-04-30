@@ -1,15 +1,12 @@
 # Dotfiles
 This repo primarily provides a basic configuration for zsh, tmux, and vim.
 
-## Install notes
+## Install
 
-I recommend to clone it to a folder $HOME/dotfiles.
-
-Make sure to checkout submodules:
 ```bash
-$ git submodule update --init --recursive
-$ cd ~/dotfiles/script
-$ ./bootstrap
+git clone --recurse-submodules -j8 https://github.com/ltriess/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./bootstrap
 ```
 
 ## Dependencies
@@ -28,11 +25,4 @@ pip3 install thefuck
 Follow instructions on [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
 Install [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) before configuring.
 Type `p10k configure` to start the configuration wizard.
-
-## Software
-
-Set global .gitignore
-```bash
-git config --global core.excludesfile ~/dotfiles/gitignore_global
-```
 
