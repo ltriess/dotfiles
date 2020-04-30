@@ -14,7 +14,7 @@ export DOTFILES_BASEDIR=$HOME/dotfiles
 export ZSH=$DOTFILES_BASEDIR/oh-my-zsh
 
 # Customize interactive python shell
-export PYTHONSTARTUP=~/.pythonrc
+export PYTHONSTARTUP=$HOME/.pythonrc
 
 # =============================================================================
 #                                 Powerlevel10k
