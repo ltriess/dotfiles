@@ -2,11 +2,11 @@
 	path = tools/fzf.symlink
 	url = https://github.com/junegunn/fzf.git
 [submodule "oh-my-zsh"]
-	path = oh-my-zsh
+	path = shell/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "antigen"]
 	path = tools/antigen
 	url = https://github.com/zsh-users/antigen.git
 [submodule "powerlevel10k"]
-	path = powerlevel10k
+	path = shell/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
