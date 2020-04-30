@@ -1,10 +1,16 @@
-# listing
-alias ll='ls -alF'
-alias ls='la -A'
-alias l='ls -CF'
-alias lm='ll | less'
+# essentials
+alias cp='cp -v'
+
+# ls essentials
 alias ls='ls --color=auto'
-alias li='du -cksh * | sort -h'
+alias ll='ls -lh'
+alias l='ls -alh'
+
+# edit config files
+alias vimrc='vim $HOME/.vimrc'
+alias bashrc='vim $HOME/.bashrc && rehash'
+alias zshrc='vim $HOME/.zshrc && rehash'
+alias localrc='vim $HOME/.localrc && rehash'
 
 # change directories
 alias ..="cd .."
@@ -23,13 +29,27 @@ alias gka="gitk --all &"
 alias giu="git gui &"
 alias gitd="git diff"
 alias gitr="git remote -v"
+alias p='git push'
 alias c="git commit -m"
 alias lg='lazygit'
 
 # programs
+alias py='python3'
+alias py2='python2'
+alias ipy='ipython3'
+alias ipy2='ipython2'
+alias txz='tar xvzf'
+alias grep='grep --color'
+alias hgrep='history | grep'
+alias df='df -h'
+alias rg='rg --smart-case'
+alias copy='rsync --archive --stats --progress --human-readable'
+alias top='htop'
+alias lsd='ls -Alh --color=always --sort=time --reverse ~/Downloads/ | tail'
+
+if [ -x "$(command -v bat)" ]; then
+    alias cat='bat'
+fi
 alias nvsmi='watch -d -n 0.5 nvidia-smi'
 alias tb="python -c \"import os, sys; os.system('tensorboard --logdir ' + ','.join([(d + ':' + d) for d in sys.argv[1:]]))\""
 
-if [ -x "$(command -v bat)" ]; then
-    alias cat="bat"
-fi
