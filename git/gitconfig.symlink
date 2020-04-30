@@ -1,0 +1,21 @@
+[user]
+    name = ltriess
+    email = mail@triess.eu
+
+[credential]
+    helper = cache --timeout=8640000
+
+[merge]
+    tool = kdiff3
+
+[alias]
+    co = checkout
+    br = branch
+    di = diff
+
+[color]
+    ui = true
+
+[core]
+    excludesfile = $HOME/dotfiles/git/gitignore_global
+
