@@ -140,6 +140,9 @@ antigen bundle allcatsarebeautiful/fasd
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Auto suggestion bundle.
+antigen bundle zsh-users/zsh-autosuggestions
+
 # Load the theme. Crash when entering git repository?
 # antigen theme robbyrussell
 
