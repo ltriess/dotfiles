@@ -123,7 +123,7 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-4]="fg=yellow,bold"
 #                               antigen
 # =============================================================================
 
-source $DOTFILES_BASEDIR/antigen/antigen.zsh
+source $DOTFILES_BASEDIR/tools/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
