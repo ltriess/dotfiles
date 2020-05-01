@@ -177,7 +177,7 @@ unset fasd_cache
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git rvm fasd)
+plugins=(fasd fzf pip thefuck)
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
