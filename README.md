@@ -1,28 +1,55 @@
 # Dotfiles
-This repo primarily provides a basic configuration for zsh, tmux, and vim.
+This repo if for my personal configurations for zsh, tmux, and vim.
 
 ## Install
 
+Clone the repo and its submodules and then run the `bootstrap` script
 ```bash
 git clone --recurse-submodules -j8 https://github.com/ltriess/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./bootstrap
 ```
 
+For updating
+```bash
+cd ~/dotfiles
+git pull
+./bootstrap
+```
+
 ## Dependencies
 
-Install with apt
-```bash
-sudo apt-get install zsh tmux vim-gnome python3-pip socat rxvt-unicode-256color xautomation xbindkeys
+Before installing, make sure you have the following packages installed:
+```
+git vim tmux zsh
 ```
 
-Install with pip
+To correctly depict the prompt in your terminal, follow the instructions on how to install [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
+
+To change the appearance of the prompt, type `p10k configure` to start the configuration wizard.
+If there are any issues, refer to the instructions for [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
+
+Install furhter dependencies with
 ```bash
-pip3 install thefuck
+sudo apt-get install python3-pip
 ```
 
-### Powerlevel10k
-Follow instructions on [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
-Install [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) before configuring.
-Type `p10k configure` to start the configuration wizard.
+## Tools
+
+This is a list of tools that I find very useful and use frequently.
+
+- [fasd](https://github.com/clvv/fasd)    `sudo apt-get install fasd`
+- [fd](https://github.com/sharkdp/fd)    `sudo apt install fd-find`
+- [fzf](https://github.com/junegunn/fzf)    `sudo apt-get install fzf`
+- [lazygit](https://github.com/jesseduffield/lazygit)    `sudo apt-get install lazygit`
+- [thefuck](https://github.com/nvbn/thefuck)    `pip3 install thefuck`
+- [tldr](https://github.com/tldr-pages/tldr)    `pip3 install tldr`
+
+## TODOs
+
+- [x] change to two row prompt
+- [ ] remove deprecated stuff
+- [ ] upgrade tmux config
+- [ ] adapt tmux style to prompt
+- [ ] upgrade vim config
 
