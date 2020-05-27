@@ -29,9 +29,23 @@ To correctly depict the prompt in your terminal, follow the instructions on how 
 To change the appearance of the prompt, type `p10k configure` to start the configuration wizard.
 If there are any issues, refer to the instructions for [Powerlevel10k](https://github.com/romkatv/powerlevel10k).
 
-Install furhter dependencies with
+Install further dependencies with
 ```bash
 sudo apt-get install python3-pip
+```
+
+#### Powerline Python Package
+Makes the `tmux` status bar as beautiful as the prompt.
+The config assumes, it is installed in `/usr/local/lib/python3.6/dist-packages/powerline`.
+If not, update path in `tmux.conf`.
+```bash
+sudo -H pip3 install powerline-status
+sudo -H pip3 install powerline-gitstatus
+```
+If you do not want to install the powerline python package, remove the following lines from `tmux.conf`
+```
+run-shell "powerline-daemon -q"
+source "/usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf"
 ```
 
 ## Tools
@@ -50,6 +64,6 @@ This is a list of tools that I find very useful and use frequently.
 - [x] change to two row prompt
 - [ ] remove deprecated stuff
 - [ ] upgrade tmux config
-- [ ] adapt tmux style to prompt
+- [x] adapt tmux style to prompt
 - [ ] upgrade vim config
 
