@@ -155,3 +155,12 @@ function! HasPaste()
     return ''
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Powerline Setup
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" comment this part if you do not have powerline installed
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+let g:airline_powerline_fonts = 1
+
