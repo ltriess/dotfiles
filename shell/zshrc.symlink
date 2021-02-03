@@ -233,3 +233,8 @@ if [ -f ~/.localrc ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -d $HOME/.cargo ]; then
+    source "$HOME/.cargo/env"
+fi
+

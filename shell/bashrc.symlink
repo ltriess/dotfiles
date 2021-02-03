@@ -124,3 +124,8 @@ fi
 [ -z "$TMUX" ] && export TERM="rxvt-unicode-256color"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ -d $HOME/.cargo ]; then
+    source "$HOME/.cargo/env"
+fi
+
