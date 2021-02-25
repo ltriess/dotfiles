@@ -32,6 +32,7 @@ alias gitr="git remote -v"
 alias p='git push'
 alias c="git commit -m"
 alias lg='lazygit'
+alias gloga='git log --oneline --decorate --graph --all'
 
 # programs
 alias py='python3'
