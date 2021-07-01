@@ -8,6 +8,9 @@
 [merge]
     tool = kdiff3
 
+[init]
+    defaultBranch = main
+
 [alias]
     co = checkout
     br = branch
