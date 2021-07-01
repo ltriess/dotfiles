@@ -1,0 +1,6 @@
+channels:
+  - defaults
+
+auto_activate_base: false
+report_errors: false
+ssl_verify: false
