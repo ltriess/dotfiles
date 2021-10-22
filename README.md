@@ -61,11 +61,3 @@ This is a list of tools that I find very useful and use frequently.
 - [thefuck](https://github.com/nvbn/thefuck)    `pip3 install thefuck`
 - [tldr](https://github.com/tldr-pages/tldr)    `pip3 install tldr`
 
-## TODOs
-
-- [x] change to two row prompt
-- [ ] remove deprecated stuff
-- [ ] upgrade tmux config
-- [x] adapt tmux style to prompt
-- [ ] upgrade vim config
-
