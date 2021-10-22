@@ -1,6 +1,8 @@
 # Dotfiles
 This repo if for my personal configurations for zsh, tmux, and vim.
 
+![prompt](docs/prompt.png)
+
 ## Install
 
 Clone the repo and its submodules and then run the `bootstrap` script
