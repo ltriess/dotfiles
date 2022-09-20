@@ -38,7 +38,7 @@ sudo apt-get install python3-pip
 
 #### Powerline Python Package
 Makes the `tmux` status bar as beautiful as the prompt.
-The config assumes, it is installed in `/usr/local/lib/python3.6/dist-packages/powerline`.
+The config assumes, it is installed in `/usr/local/lib/python3.8/dist-packages/powerline`.
 If not, update path in `tmux.conf`.
 ```bash
 sudo -H pip3 install powerline-status
@@ -47,7 +47,7 @@ sudo -H pip3 install powerline-gitstatus
 If you do not want to install the powerline python package, remove the following lines from `tmux.conf`
 ```
 run-shell "powerline-daemon -q"
-source "/usr/local/lib/python3.6/dist-packages/powerline/bindings/tmux/powerline.conf"
+source "/usr/local/lib/python3.8/dist-packages/powerline/bindings/tmux/powerline.conf"
 ```
 
 ## Tools
