@@ -16,6 +16,9 @@ export ZSH=$DOTFILES_BASEDIR/oh-my-zsh
 # Customize interactive python shell
 export PYTHONSTARTUP=$HOME/.pythonrc
 
+# user bin
+export PATH="$PATH:${HOME}/.local/bin"
+
 # =============================================================================
 #                                 Powerlevel10k
 # =============================================================================
@@ -216,6 +219,14 @@ if [ -f $HOME/.alias ]; then
 else
      print "Warn: $HOME/.alias not found."
 fi
+
+# =============================================================================
+#                   set zsh functions dir (autoloaded when used)
+# =============================================================================
+fpath=( ~/.zfunc "${fpath[@]}" )
+autoload -Uz cnda
+autoload -Uz cndd
+autoload -Uz tb
 
 # =============================================================================
 #                            local and third party

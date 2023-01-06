@@ -52,5 +52,4 @@ if [ -x "$(command -v bat)" ]; then
     alias cat='bat'
 fi
 alias nvsmi='watch -d -n 0.5 nvidia-smi'
-alias tb="python $HOME/dotfiles/scripts/tensorboard.py"
 
