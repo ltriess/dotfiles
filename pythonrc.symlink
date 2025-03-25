@@ -7,7 +7,6 @@ $PYTHONSTARTUP must be in the environment and point to this file.
 # IMPORTS & CONSTANTS #
 #######################
 
-import imp
 import os
 import sys
 import re
